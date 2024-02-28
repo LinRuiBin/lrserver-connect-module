@@ -5,7 +5,7 @@ import (
 	"log"
 	"sync"
 	"time"
-
+	"go.uber.org/zap"
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	"go.etcd.io/etcd/client/v3"
 )
@@ -25,6 +25,21 @@ func NewServiceDiscovery(endpoints []string, userName string, password string) *
 		DialTimeout: 5 * time.Second,
 		Username:    userName,
 		Password:    password,
+		LogConfig: &zap.Config{
+			Level:       zap.NewAtomicLevelAt(zap.ErrorLevel),
+			Development: false,
+			Sampling: &zap.SamplingConfig{
+				Initial:    100,
+				Thereafter: 100,
+			},
+			Encoding:      "json",
+			EncoderConfig: zap.NewProductionEncoderConfig(),
+
+			// Use "/dev/null" to discard all
+			OutputPaths:      []string{"stderr"},
+			ErrorOutputPaths: []string{"stderr"},
+		},
+
 		//Username:    "root",
 		//Password:    "lrbetcd123qwe",
 	})
