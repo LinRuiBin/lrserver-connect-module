@@ -1,5 +1,13 @@
 package Request
 
+const (
+	MsgTypeUnKnown = iota
+	MsgTypeVoice
+	MsgTypeText
+	MsgTypePic
+)
+
+
 // tcp - http 设备同步健康数据给服务器
 type DevHealthData struct {
 	Hr        uint   `json:"hr"` //心率
@@ -9,10 +17,12 @@ type DevHealthData struct {
 	TimeStamp uint    `json:"timeStamp"`//时间戳
 }
 
-// tcp - http 设备发送语音聊天数据给服务器
-type DevchatVoiceData struct {
-	Url        string   `json:"url"` //文件地址
-	UserID       string   `json:"userID"` // userID 单聊的时候为用户id 群聊时无效
-	Type       uint   `json:"type"` //0 单聊  1群聊
-	Duration       uint   `json:"duration"` //时长
+// tcp <-> http 设备发送语音聊天数据给服务器
+type DevChatData struct {
+
+	IsGroup    uint    `json:"isGroup" form:"isGroup" `      //是否为群聊
+	UserID    int    `json:"userId" form:"userId" `      //用户id
+	Type      uint    `json:"type" form:"type" `          //聊天类型
+	Content   string `json:"content" form:"content" `    //数据内容
+	Duration  uint    `json:"duration" form:"duration" `  //录音时长
 }
