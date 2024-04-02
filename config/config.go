@@ -2,6 +2,8 @@ package config
 
 const (
 
+	GrpcRequestTimeout = 15
+	
 	TcpGrpcServerHost  = "127.0.0.1"
 	TcpGrpcServerPort  = 60001
 

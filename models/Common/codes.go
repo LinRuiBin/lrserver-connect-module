@@ -9,6 +9,7 @@ var (
 	ErrDataErr = errors.New("Data error")
 	ErrNoHanlder = errors.New("Router not found")
 	ErrDeviceOffline = errors.New("Device Offline")
+	ErrDeviceHandling = errors.New("Request is handling")
 	ErrHandleTimeout = errors.New("Device handle time out")
 )
 
