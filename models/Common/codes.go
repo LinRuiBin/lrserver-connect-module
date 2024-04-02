@@ -6,14 +6,16 @@ import (
 
 var (
 
+	ErrDataErr = errors.New("Data error")
 	ErrNoHanlder = errors.New("Router not found")
 	ErrDeviceOffline = errors.New("Device Offline")
+	ErrHandleTimeout = errors.New("Device handle time out")
 )
 
 const (
 	Common_Success = 0  //成功
 	Common_Fail    = -1 //失败
-	Common_NoRouter = -2 //未定义路由
+	//Common_NoRouter = -2 //未定义路由
 )
 
 // Http Grpc Opration Code
@@ -30,6 +32,8 @@ const (
 
 // TCP Grpc Opration Code
 const (
+
+	TCode_TcpCmd = "T0000" //指令透传 原数据发送给手表
 	TCode_FindDev = "T0001" //找设备
 	TCode_GetOnlineCount= "T0002"  //获取在线设备数
 	TCode_CheckOnlineDev= "T0003"  //检查指定imei的设备是否在线
