@@ -27,6 +27,7 @@ const (
 	HCode_GetDevBindUsers = "H0005" //获取绑定人列表
 	HCode_HealData        = "H0006" //健康数据
 	HCode_Chat            = "H0007" //聊天消息
+	HCode_Locate            = "H0008" //定位数据
 )
 
 // TCP Grpc Opration Code
