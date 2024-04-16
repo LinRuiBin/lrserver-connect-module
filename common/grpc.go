@@ -1,25 +1,22 @@
 package common
 
-
 import (
-
-"gitee.com/linuibin/lrserver-connect-module/grpcs/HTServerGrpc"
-	"gitee.com/linuibin/lrserver-connect-module/models/Common"
+	"gitee.com/linuibin/lrserver-connect-module/grpcs/HTServerGrpc"
+	"gitee.com/linuibin/lrserver-connect-module/models"
 )
 
 func RespWithOffline(request *HTServerGrpc.HTRequest) (reply *HTServerGrpc.HTReply, err error) {
 
-
 	return &HTServerGrpc.HTReply{
 		Imei: request.Imei,
-	}, Common.ErrDeviceOffline
+	}, models.ErrDeviceOffline
 }
 
 func RespWithTimeout(request *HTServerGrpc.HTRequest) (reply *HTServerGrpc.HTReply, err error) {
 
 	return &HTServerGrpc.HTReply{
 		Imei: request.Imei,
-	}, Common.ErrHandleTimeout
+	}, models.ErrHandleTimeout
 }
 
 func GrpcSuccessResp(request *HTServerGrpc.HTRequest) (reply *HTServerGrpc.HTReply, err error) {

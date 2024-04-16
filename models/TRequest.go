@@ -1,4 +1,4 @@
-package Request
+package models
 
 // http - tcp 电话本参数
 type DevPhoneBook struct {
@@ -10,4 +10,3 @@ type DevPhoneBook struct {
 type DevOnlineReq struct {
 	Imeis []string `json:"imeis"` //传入imei 数组 返回设备在线状态
 }
-

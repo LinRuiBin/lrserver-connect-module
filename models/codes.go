@@ -1,4 +1,4 @@
-package Common
+package models
 
 import (
 	"errors"
@@ -20,16 +20,16 @@ const (
 
 // Http Grpc Opration Code
 const (
-	HCode_DevLogin        = "H0001" //设备上线
-	HCode_DevOffLine      = "H0002" //设备离线
-	HCode_CheckDevValid   = "H0003" //查询设备是否入库
-	HCode_CheckDevBind    = "H0004" //查询设备是否被绑定
-	HCode_Members = "H0005" //获取绑定人列表
-	HCode_HealData        = "H0006" //健康数据
-	HCode_Chat            = "H0007" //聊天消息
-	HCode_Locate            = "H0008" //定位数据
-	HCode_Iccid           = "H0009" //设备上传ICCID
-	HCode_FuncConfig          = "H0010" //设备上传功能配置
+	HCode_DevLogin      = "H0001" //设备上线
+	HCode_DevOffLine    = "H0002" //设备离线
+	HCode_CheckDevValid = "H0003" //查询设备是否入库
+	HCode_CheckDevBind  = "H0004" //查询设备是否被绑定
+	HCode_Members       = "H0005" //获取绑定人列表
+	HCode_HealData      = "H0006" //健康数据
+	HCode_Chat          = "H0007" //聊天消息
+	HCode_Locate        = "H0008" //定位数据
+	HCode_Iccid         = "H0009" //设备上传ICCID
+	HCode_FuncConfig    = "H0010" //设备上传功能配置
 
 )
 
