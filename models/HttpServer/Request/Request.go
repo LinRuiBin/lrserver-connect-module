@@ -81,3 +81,4 @@ type WifiCmdData struct {
 	Mac    string `json:"mac" form:"mac" `  //mac地址
 	Signal int    `json:"signal" form:"signal" `  //信号强度
 }
+
