@@ -4,3 +4,8 @@ package models
 type DevOnlineCountData struct {
 	Count uint `json:"count"` //心率
 }
+
+//视频通话参数
+type DevVideoResp struct {
+	Code int `json:"code"`  //CallDevRespType
+}

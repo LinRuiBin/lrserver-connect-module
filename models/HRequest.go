@@ -1,31 +1,6 @@
 package models
 
-const (
-	MsgTypeUnKnown = iota
-	MsgTypeVoice
-	MsgTypeText
-	MsgTypePic
-)
 
-const (
-	AlarmTypeNone = iota
-	AlarmTypeSOS
-	AlarmTypeLowBattery
-	AlarmTypeOutFence
-	AlarmTypeInFence
-	AlarmTypeTakeOff
-	AlarmTypeFallDown
-	AlarmTypeFallWater
-)
-
-const (
-	StatusNone = iota
-	StatusLowBattery
-	StatusOutFence
-	StatusInfence
-	StatusTakeOff
-	StatusStop
-)
 
 // tcp - http 设备同步健康数据给服务器
 type DevHealthData struct {
@@ -39,7 +14,7 @@ type DevHealthData struct {
 // tcp <-> http 设备发送语音聊天数据给服务器
 type DevChatData struct {
 	IsGroup  uint   `json:"isGroup" form:"isGroup" `   //是否为群聊
-	UserID   int    `json:"userId" form:"userId" `     //用户id
+	UserID   string    `json:"userId" form:"userId" `     //用户id
 	Type     uint   `json:"type" form:"type" `         //聊天类型
 	Content  string `json:"content" form:"content" `   //数据内容
 	Duration uint   `json:"duration" form:"duration" ` //录音时长
