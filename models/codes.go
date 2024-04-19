@@ -27,6 +27,7 @@ const (
 	HCode_Members       = "H_BindInfo" //获取绑定人列表
 	HCode_HealData      = "H_Health" //健康数据
 	HCode_Chat          = "H_Chat" //聊天消息
+	HCode_CheckChat = "H_ChatCheck" //向服务器查询是否有离线消息
 	HCode_Locate        = "H_Locate" //定位数据
 	HCode_Iccid         = "H_Iccid" //设备上传ICCID
 	HCode_FuncConfig    = "H_Config" //设备上传功能配置
