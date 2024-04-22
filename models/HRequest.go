@@ -56,3 +56,19 @@ type WifiCmdData struct {
 	Mac    string `json:"mac" form:"mac" `       //mac地址
 	Signal int    `json:"signal" form:"signal" ` //信号强度
 }
+
+type IntCmdData struct {
+	Timestamp      int64    `json:"timestamp" form:"timestamp" `           //时间转为时间戳
+	Value int    `json:"value" form:"value" ` //整数传值
+}
+
+type FloatCmdData struct {
+	Timestamp      int64    `json:"timestamp" form:"timestamp" `           //时间转为时间戳
+	Value float64    `json:"value" form:"value" ` //整数传值
+}
+
+type BpCmdData struct {
+	Timestamp      int64    `json:"timestamp" form:"timestamp" `           //时间转为时间戳
+	Sbp int    `json:"sbp" form:"sbp" ` //收缩压
+	Dbp int    `json:"dbp" form:"dbp" ` //舒张压
+}

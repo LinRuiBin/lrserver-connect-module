@@ -33,9 +33,15 @@ const (
 	HCode_FuncConfig    = "H_Config" //设备上传功能配置
 
 	HCode_VCallReq = "H_CallReq" //设备请求视频通话
-	HCode_VCallRefuce = "H_CallRefuce" //设备拒接通话
-	HCode_VCallCancel = "H_CallCancel" //设备取消通话
-	HCode_VCallHandup = "H_CallHandup" //设备挂断通话
+	HCode_VCallRefuce = "H_CRefuce" //设备拒接通话
+	HCode_VCallCancel = "H_CCancel" //设备取消通话
+	HCode_VCallHandup = "H_CHandup" //设备挂断通话
+
+	HCode_HealthHR      = "H_HR" //心率数据
+	HCode_HealthBP      = "H_BP" //血压数据
+	HCode_HealthBPOxy      = "H_BpOxy" //血氧数据
+	HCode_HealthTemp      = "H_Temp" //体温数据
+
 )
 
 // TCP Grpc Opration Code
