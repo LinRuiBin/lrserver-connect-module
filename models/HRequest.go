@@ -31,7 +31,7 @@ type LocateCmd struct {
 	Altitude       float64 `json:"altitude" form:"altitude" `             //海拔
 	SatelliteCount int     `json:"satelliteCount" form:"satelliteCount" ` //卫星个数
 	GsmSignal      int     `json:"gsmSignal" form:"gsmSignal" `           //*3/100-110后的值
-	//Battery        int           `json:"battery" form:"battery" `    //电量
+	Battery        int           `json:"battery" form:"battery" `    //电量
 	//Step           int           `json:"step" form:"step" `    //步数 定位包不处理 时区有问题
 	//RollS          int           `json:"rollS" form:"rollS" `    // 翻滚次数 定位包不处理 时区有问题
 	//Alarms         string        `json:"alarms" form:"alarms" `    //设备状态和报警状态位 转为 DevStatus AlarmType
