@@ -41,6 +41,7 @@ const (
 	HCode_HealthBP      = "H_BP" //血压数据
 	HCode_HealthBPOxy      = "H_BpOxy" //血氧数据
 	HCode_HealthTemp      = "H_Temp" //体温数据
+	HCode_HealthKA      = "H_KA" //心跳包数据
 
 )
 

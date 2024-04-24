@@ -11,6 +11,16 @@ type DevHealthData struct {
 	TimeStamp uint    `json:"timeStamp"` //时间戳
 }
 
+// tcp - http 设备心跳包数据给服务器
+type DevKAData struct {
+	Distance        float64    `json:"distance"`        //距离 km
+	Roll       uint    `json:"roll"`       //翻滚次数
+	Battery       uint    `json:"battery"`       //电量
+	Step      uint `json:"step"`      //步数
+	DateStr string    `json:"dateStr"` //手表本地时间
+}
+
+
 // tcp <-> http 设备发送语音聊天数据给服务器
 type DevChatData struct {
 	IsGroup  uint   `json:"isGroup" form:"isGroup" `   //是否为群聊
