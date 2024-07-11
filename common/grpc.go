@@ -1,19 +1,17 @@
 package common
 
 import (
-	"gitee.com/linuibin/lrserver-connect-module/grpcs/HTServerGrpc"
-	"gitee.com/linuibin/lrserver-connect-module/models"
+	"github.com/linuibin/lrserver-connect-module/grpcs/HTServerGrpc"
+	"github.com/linuibin/lrserver-connect-module/models"
 )
 
-func GrpcRespWithData(request *HTServerGrpc.HTRequest, data []byte,inErr error) (reply *HTServerGrpc.HTReply, err error) {
+func GrpcRespWithData(request *HTServerGrpc.HTRequest, data []byte, inErr error) (reply *HTServerGrpc.HTReply, err error) {
 
 	return &HTServerGrpc.HTReply{
 		Imei: request.Imei,
 		Data: data,
 	}, inErr
 }
-
-
 
 func RespWithOffline(request *HTServerGrpc.HTRequest) (reply *HTServerGrpc.HTReply, err error) {
 
@@ -43,7 +41,6 @@ func GrpcSuccessRespWithJsonData(request *HTServerGrpc.HTRequest, data []byte) (
 		Data: data,
 	}, nil
 }
-
 
 func GrpcRespWithError(request *HTServerGrpc.HTRequest, inErr error) (reply *HTServerGrpc.HTReply, err error) {
 

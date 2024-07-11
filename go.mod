@@ -1,4 +1,4 @@
-module gitee.com/linuibin/lrserver-connect-module
+module github.com/linuibin/lrserver-connect-module
 
 //tcp服务器模块和http服务器模块 连接通信的一些通用公共类
 //比如 指令的定义 数据格式定义
